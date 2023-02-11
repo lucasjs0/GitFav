@@ -91,7 +91,7 @@ header > img:first-child {
   fill: #065E7C;
 }
 
-main {
+.table-wrapper {
   margin-top: 8.7rem;
   border: 1px solid #4A808C;
   border-radius: 1.2rem;
@@ -125,10 +125,6 @@ table th:last-child {
   border-top-right-radius: 1.2rem;
 }
 
-tbody tr {
-  border-bottom: 1px solid #4A808C;
-}
-
 table tr {
   background: hsla(192, 65%, 7%, 1); 
 }
@@ -141,8 +137,11 @@ table td {
   padding: 2.4rem 4.0rem;
 }
 
-/*criar a borda para o td*/
+table td:last-child {
+  border-bottom-right-radius: 1.2rem;
+}
 
+/* fazer a borda do td first child do lado esquerdo */
 
 td.user {
   display: flex;
@@ -164,6 +163,11 @@ td.user a {
 
 td.user p {
   margin-bottom: .8rem;
+  font-weight: bold;
+}
+
+td.user span {
+  font-weight: normal;
 }
 
 td .remove {
@@ -171,4 +175,10 @@ td .remove {
   border: none;
   color: hsla(355, 91%, 66%, 1);
   cursor: pointer;
+}
+
+
+/* utilizar depois quando for fazer a tabela sem usuario */
+.no-user {
+  display: none;
 }

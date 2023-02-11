@@ -25,7 +25,8 @@
         </button>
       </div>
     </header>
-    <main>
+
+    <div class="table-wrapper">
       <table>
         <thead>
           <tr>
@@ -35,26 +36,7 @@
             <th>Ação</th>
           </tr>
         </thead>
-        <tbody class="empty-state">
-          <tr>
-            <td class="user">
-              <img src="https://github.com/Lucasjs0.png" alt="Foto do perfil github">
-              <a href="https://github.com/Lucasjs0" target="_blank">
-                <p>Lucas Janaudis Soares</p>
-                <span>/Lucasjs0</span>
-              </a>
-            </td>
-            <td class="repositories">
-              21
-            </td>
-            <td class="followers">
-              17
-            </td>
-            <td>
-              <button class="remove">Remover</button>
-            </td>
-          </tr>
-
+        <tbody>
           <tr>
             <td class="user">
               <img src="https://github.com/Lucasjs0.png" alt="Foto do perfil github">
@@ -75,7 +57,12 @@
           </tr>
         </tbody>
       </table>
-    </main>
+    </div>
+
+    <div class="no-user">
+      <img src="./assets/star.svg" alt="Desenho de uma estrela assustada">
+      <p>Nenhum favorito ainda</p>
+    </div>
   </div> 
 </body>
 </html>
