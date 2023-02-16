@@ -95,8 +95,27 @@ header > img:first-child {
   margin-top: 8.7rem;
   border: 1px solid #4A808C;
   border-radius: 1.2rem;
+  max-height: 500px;
+  overflow: overlay;
 }
 
+.table-wrapper thead {
+  position: sticky;
+  top: 0;
+}
+
+.table-wrapper::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: hsla(191, 31%, 42%, 1);
+  border-radius: 1rem;
+}
 
 table * {
   font-size: 2rem;
@@ -106,7 +125,6 @@ table * {
 
 table {
   width: 112.0rem;
-  max-height: 500px;
   border-collapse: collapse;
 }
 
@@ -126,29 +144,28 @@ table th:last-child {
 }
 
 table tr {
-  background: hsla(192, 65%, 7%, 1); 
+  background: hsla(192, 65%, 7%, 1);
+  border-bottom: 1px solid #4A808C;
 }
 
 table tr:nth-child(odd) {
   background: hsla(195, 61%, 6%, 0.5);
+  border-bottom: 1px solid #204a55;
+}
+
+table tr:last-child {
+  border-bottom: none;
 }
 
 table td {
   padding: 2.4rem 4.0rem;
 }
 
-table td:last-child {
-  border-bottom-right-radius: 1.2rem;
-}
-
-/* fazer a borda do td first child do lado esquerdo */
-
 td.user {
   display: flex;
   align-items: center;
   gap: 1.6rem;
 }
-
 
 td.user img {
   width: 5.6rem;
@@ -180,5 +197,19 @@ td .remove {
 
 /* utilizar depois quando for fazer a tabela sem usuario */
 .no-user {
+  width: 112.0rem;
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  background: hsla(195, 61%, 6%, 0.5);
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  font-size: 4rem;
+  color: hsla(189, 4%, 32%, 1);
+}
+
+.hide {
   display: none;
 }
